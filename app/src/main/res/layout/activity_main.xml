@@ -23,25 +23,33 @@
         android:id="@+id/somma"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Somma" />
+        android:fontFamily="sans-serif-black"
+        android:text="Somma"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/differenza"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Differenza" />
+        android:fontFamily="sans-serif-black"
+        android:text="Differenza"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/moltiplicazione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Moltiplicazione" />
+        android:fontFamily="sans-serif-black"
+        android:text="Moltiplicazione"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/divisione"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Divisione" />
+        android:fontFamily="sans-serif-black"
+        android:text="Divisione"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/risultato"
