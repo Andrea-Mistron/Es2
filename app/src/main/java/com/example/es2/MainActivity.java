@@ -9,44 +9,75 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.text.BreakIterator;
-
 public class MainActivity extends AppCompatActivity {
 
     private Button somma;
     private Button differenza;
-    private EditText numero1;   //serve per ricevere il risultato
-    private EditText numero2;
-    private TextView risultato; //serve per stampare il risultato a video
+    private Button moltiplicazione;
+    private Button divisione;
+    private EditText num1;
+    private EditText num2;
+    private TextView risultato;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnSaluta = (Button)findViewById(R.id.calcola);
-        final TextView txtViewSaluta= (TextView)findViewById(R.id.calcola);
-        btnSaluta.setOnClickListener(new Button.OnClickListener() {
+        somma = findViewById(R.id.somma);
+        differenza = findViewById(R.id.differenza);
+        moltiplicazione = findViewById(R.id.moltiplicazione);
+        divisione = findViewById(R.id.divisione);
+        num1 = findViewById(R.id.num1);
+        num2 = findViewById(R.id.num2);
+        risultato = findViewById(R.id.risultato);
+
+        somma.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
             public void onClick(View v) {
-                String strNum1 = numero1.getText().toString();
-                String strNum2 = numero2.getText().toString();
-                int n1 = Integer.parseInt(strNum1);
-                int n2 = Integer.parseInt(strNum2);
-                int res = n1 + n2;
-                String strStr = String.valueOf(res);
-                risultato.setText(strStr);
+                double n1 = Double.parseDouble(num1.getText().toString());
+                double n2 = Double.parseDouble(num2.getText().toString());
+                double res = n1 + n2;
+                risultato.setText(Double.toString(res));
             }
         });
 
+        differenza.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View v) {
+                double n1 = Double.parseDouble(num1.getText().toString());
+                double n2 = Double.parseDouble(num2.getText().toString());
+                double res = n1 - n2;
+                risultato.setText(Double.toString(res));
+            }
+        });
 
-        somma = (Button) findViewById(R.id.somma);
-        differenza = (Button) findViewById(R.id.differenza);
-        risultato = (TextView)findViewById(R.id.calcola);
-        numero1 = (EditText)findViewById(R.id.num1);
-        numero2 = (EditText)findViewById(R.id.num2);
+        moltiplicazione.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View v) {
+                double n1 = Double.parseDouble(num1.getText().toString());
+                double n2 = Double.parseDouble(num2.getText().toString());
+                double res = n1 * n2;
+                risultato.setText(Double.toString(res));
+            }
+        });
 
-//capire come agganciare un ascoltatore ad un bottone.
-        //bisogna usare dei "puntatori" per capire cosa fare una volta che un evento avviene (devo capire cosa fare quando vengo cliccato).
+        divisione.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View v) {
+                double n1 = Double.parseDouble(num1.getText().toString());
+                double n2 = Double.parseDouble(num2.getText().toString());
+                if (n2 != 0) {
+                    double res = n1 / n2;
+                    risultato.setText(Double.toString(res));
+                } else {
+                    risultato.setText("Errore: divisione per zero");
+                }
+            }
+        });
     }
 }

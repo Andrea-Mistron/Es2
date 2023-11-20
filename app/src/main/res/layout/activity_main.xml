@@ -1,98 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/calcola"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calcola"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
-
-    <Button
-        android:id="@+id/somma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Somma"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
-
-    <Button
-        android:id="@+id/differenza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Differenza"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
 
     <EditText
         android:id="@+id/num1"
-        android:layout_width="243dp"
-        android:layout_height="67dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205" />
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero 1" />
 
     <EditText
         android:id="@+id/num2"
-        android:layout_width="243dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39"
-        android:autofillHints="" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero 2" />
+
+
+    <Button
+        android:id="@+id/somma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Somma" />
+
+    <Button
+        android:id="@+id/differenza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Differenza" />
+
+    <Button
+        android:id="@+id/moltiplicazione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Moltiplicazione" />
+
+    <Button
+        android:id="@+id/divisione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Divisione" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="153dp"
-        android:layout_height="42dp"
-        android:text="Numero1"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        android:id="@+id/risultato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Risultato" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="126dp"
-        android:layout_height="57dp"
-        android:text="Numero2"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
