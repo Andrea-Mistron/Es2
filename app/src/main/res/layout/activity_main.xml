@@ -46,7 +46,10 @@
     <TextView
         android:id="@+id/risultato"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Risultato" />
+        android:layout_height="48dp"
+        android:fontFamily="cursive"
+        android:text="Risultato"
+        android:textAlignment="center"
+        android:textSize="34sp" />
 
 </LinearLayout>
